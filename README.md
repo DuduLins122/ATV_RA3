@@ -1,9 +1,13 @@
+
 # Trabalho de Estrutura de Dados — Tabela Hash
 
-## 👨‍💻 Autor
-Nome: Marcelo Eduardo Claudiano Nascimento Lins, Carlos Eduardo Jerônimo, Miguel Wihby, Gulherme Santos  
-Curso: Ciência da Computação  
-Semestre:   
+## 👥 Integrantes
+- Marcelo Eduardo Claudiano Nascimento Lins
+- Carlos Eduardo Jerônimo
+- Miguel Wihby
+- Gulherme Santos
+
+Curso: Ciência da Computação
 
 ---
 
@@ -21,8 +25,9 @@ Implementar e analisar o desempenho de diferentes funções de hashing em tabela
 - 100.000 posições
 
 ### Tamanhos dos conjuntos de dados
-- 1 milhão de registros (executado com sucesso)
-- 5 milhões e 20 milhões (execução futura com otimização por rodada)
+- 1 milhão de registros
+- 5 milhões de registros
+- 20 milhões de registros
 
 ### Funções hash implementadas
 1. **Resto da divisão**
@@ -33,48 +38,39 @@ Implementar e analisar o desempenho de diferentes funções de hashing em tabela
 
 ## 🔢 Geração dos Dados
 
-- Cada registro é um número de 9 dígitos (tipo `String`).
+- Cada registro é um número de 9 dígitos (tipo `int`).
 - Dados gerados com `Random(seed)` para garantir reprodutibilidade entre rodadas.
 - Todos os registros são inseridos e buscados com os mesmos conjuntos para garantir justiça nos testes.
 
 ---
 
-## 📊 Resultados para 1 Milhão de Registros
+## 📊 Resultados
 
-### 📈 Número de Colisões
-`Veja os dados reais no arquivo graficos_dados_corrigido_final.csv`
+Os resultados foram exportados automaticamente para o arquivo `resultados_hash.csv`, contendo:
 
-### ⏱️ Tempo de Inserção (ms)
-`Veja os dados reais no arquivo graficos_dados_corrigido_final.csv`
+- Nome da função hash
+- Tamanho da tabela
+- Quantidade de dados
+- Número de colisões
+- Tempo de inserção (ms)
+- Número de comparações nas buscas
+- Tempo de busca (ms)
 
-### 🔍 Comparações nas Buscas
-`Veja os dados reais no arquivo graficos_dados_corrigido_final.csv`
-
----
-
-## 🧠 Análise dos Resultados
-
-- **Colisões** foram muito altas nas tabelas pequenas, especialmente com 1000 posições (99,9% de colisão).
-- **Tempos de inserção** aumentaram com o tamanho da tabela, principalmente por causa da sondagem linear.
-- **Função de dobramento** teve desempenho levemente inferior em tempo, mas similar em colisões.
-- Com **100.000 posições**, o tempo de inserção aumentou bastante devido ao custo de sondagem em uma área de espalhamento muito grande.
+Esse arquivo pode ser utilizado para gerar gráficos comparativos em qualquer ferramenta de visualização (Excel, Google Sheets, Python etc.).
 
 ---
 
 ## ✅ Conclusão
 
-- A função **Multiplicação de Knuth** apresentou o melhor custo-benefício geral entre tempo e colisão.
-- Para grandes volumes de dados, o tamanho da tabela **deve ser bem planejado**, pois o impacto no tempo de inserção cresce muito.
-- **Todas as funções hash são sensíveis ao fator de carga**, mas os testes com 1 milhão de dados mostraram limites seguros e comparáveis entre si.
+- A função **Multiplicação de Knuth** apresentou o melhor custo-benefício entre tempo e dispersão.
+- Tabelas com 1.000 posições apresentaram taxa altíssima de colisão (até 99%).
+- O desempenho da **tabela de 100.000 posições** em tempo de inserção e busca caiu devido à dispersão ampla e sondagem.
+- Os dados e métricas são reprodutíveis, e a implementação seguiu as regras da atividade com uso exclusivo de estruturas autorizadas.
 
 ---
 
-## ▶️ Instruções para Execução
+## 📂 Arquivos Entregues
 
-1. Abra o projeto no IntelliJ.
-2. Compile e execute `HashMain.java`.
-3. O programa irá gerar os resultados no console e salvar no arquivo `resultados_hash.csv`.
-4. Os gráficos são gerados automaticamente se rodar o script de análise Python (ou você pode montar manualmente com Excel).
-
----
-
+- `HashMain.java`: código-fonte completo com geração de dados, testes e exportação em CSV.
+- `resultados_hash.csv`: resultados de todas as rodadas com métricas coletadas.
+- `README.md`: este documento explicativo.
