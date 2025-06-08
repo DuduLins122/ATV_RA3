@@ -1,7 +1,7 @@
 
 # Trabalho de Estrutura de Dados — Tabela Hash
 
-## 👥 Integrantes
+##  Integrantes
 - Marcelo Eduardo Claudiano Nascimento Lins
 - Carlos Eduardo Jerônimo
 - Miguel Wihby
@@ -11,13 +11,13 @@ Curso: Ciência da Computação
 
 ---
 
-## 📌 Objetivo
+##  Objetivo
 
 Implementar e analisar o desempenho de diferentes funções de hashing em tabelas hash com variações de tamanho e volume de dados. Foram utilizadas três funções de hash e diferentes tamanhos de tabela para avaliar eficiência em termos de colisões, tempo de inserção e busca.
 
 ---
 
-## ⚙️ Estratégias Utilizadas
+##  Estratégias Utilizadas
 
 ### Tamanhos da tabela hash
 - 1.000 posições
@@ -36,7 +36,7 @@ Implementar e analisar o desempenho de diferentes funções de hashing em tabela
 
 ---
 
-## 🔢 Geração dos Dados
+##  Geração dos Dados
 
 - Cada registro é um número de 9 dígitos (tipo `int`).
 - Dados gerados com `Random(seed)` para garantir reprodutibilidade entre rodadas.
@@ -44,7 +44,7 @@ Implementar e analisar o desempenho de diferentes funções de hashing em tabela
 
 ---
 
-## 📊 Resultados
+##  Resultados
 
 Os resultados foram exportados automaticamente para o arquivo `resultados_hash.csv`, contendo:
 
@@ -56,11 +56,9 @@ Os resultados foram exportados automaticamente para o arquivo `resultados_hash.c
 - Número de comparações nas buscas
 - Tempo de busca (ms)
 
-Esse arquivo pode ser utilizado para gerar gráficos comparativos em qualquer ferramenta de visualização (Excel, Google Sheets, Python etc.).
-
 ---
 
-## ✅ Conclusão
+##  Conclusão
 
 - A função **Multiplicação de Knuth** apresentou o melhor custo-benefício entre tempo e dispersão.
 - Tabelas com 1.000 posições apresentaram taxa altíssima de colisão (até 99%).
@@ -69,7 +67,7 @@ Esse arquivo pode ser utilizado para gerar gráficos comparativos em qualquer fe
 
 ---
 
-## 📂 Arquivos Entregues
+##  Arquivos Entregues
 
 - `HashMain.java`: código-fonte completo com geração de dados, testes e exportação em CSV.
 - `resultados_hash.csv`: resultados de todas as rodadas com métricas coletadas.
