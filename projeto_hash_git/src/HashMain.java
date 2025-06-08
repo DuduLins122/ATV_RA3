@@ -144,7 +144,6 @@ abstract class HashTable {
         return comparisons;
     }
 
-    // Getters e setters para resultados
     public void setInsertMetrics(int colisoes, long tempoInsercao) {
         this.colisoes = colisoes;
         this.tempoInsercao = tempoInsercao;
